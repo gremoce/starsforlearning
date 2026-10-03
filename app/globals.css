@@ -1,0 +1,1070 @@
+@import "tailwindcss";
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #faf8f1;
+  color: #292822;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-link {
+  position: relative;
+  color: #77736a;
+  transition: color 250ms ease;
+}
+
+.nav-link:hover {
+  color: #292822;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background: #f1c84b;
+  transition: width 250ms ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.footer-link {
+  transition:
+    color 200ms ease,
+    transform 200ms ease;
+}
+
+.footer-link:hover {
+  color: #faf8f1;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.homepage {
+  position: relative;
+  overflow: hidden;
+  background: #faf8f1;
+}
+
+
+/* =========================================================
+   FLOWING BACKGROUND
+========================================================= */
+
+/*
+   These are deliberately thin outlines rather than
+   large filled circles.
+*/
+
+.page-decoration {
+  position: absolute;
+  pointer-events: none;
+  border: 1px solid #e9e2d6;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.page-decoration-one {
+  width: 520px;
+  height: 520px;
+  right: -300px;
+  top: 48%;
+  animation: page-flow-one 18s ease-in-out infinite;
+}
+
+.page-decoration-two {
+  width: 330px;
+  height: 330px;
+  left: -210px;
+  top: 70%;
+  border-color: #e7dfeb;
+  animation: page-flow-two 15s ease-in-out infinite;
+}
+
+@keyframes page-flow-one {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-25px) rotate(10deg);
+  }
+}
+
+@keyframes page-flow-two {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(25px) rotate(-8deg);
+  }
+}
+
+
+/* =========================================================
+   FLOWING LINES
+========================================================= */
+
+.flow-line {
+  position: absolute;
+  pointer-events: none;
+
+  width: 650px;
+  height: 220px;
+
+  border: 1px solid #e8e1d5;
+  border-radius: 50%;
+
+  opacity: 0.65;
+}
+
+.flow-line-one {
+  left: -300px;
+  top: 17%;
+
+  transform: rotate(-17deg);
+
+  animation: flow-one 13s ease-in-out infinite;
+}
+
+.flow-line-two {
+  right: -300px;
+  top: 30%;
+
+  transform: rotate(18deg);
+
+  border-color: #e4dbea;
+
+  animation: flow-two 16s ease-in-out infinite;
+}
+
+.flow-line-three {
+  left: 30%;
+  bottom: -150px;
+
+  width: 550px;
+  height: 180px;
+
+  transform: rotate(-5deg);
+
+  border-color: #e8e2d8;
+
+  animation: flow-three 18s ease-in-out infinite;
+}
+
+@keyframes flow-one {
+  0%,
+  100% {
+    transform: rotate(-17deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(-12deg) translate(35px, -15px);
+  }
+}
+
+@keyframes flow-two {
+  0%,
+  100% {
+    transform: rotate(18deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(12deg) translate(-30px, 20px);
+  }
+}
+
+@keyframes flow-three {
+  0%,
+  100% {
+    transform: rotate(-5deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(3deg) translate(0, -20px);
+  }
+}
+
+
+/* =========================================================
+   BACKGROUND STARS
+========================================================= */
+
+.background-star {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+
+  animation:
+    background-twinkle 5s ease-in-out infinite,
+    background-drift 8s ease-in-out infinite;
+}
+
+.background-star-one {
+  top: 39%;
+  left: 8%;
+  color: #f1c84b;
+}
+
+.background-star-two {
+  top: 58%;
+  right: 9%;
+  color: #a999b8;
+  animation-delay: -1.5s;
+}
+
+.background-star-three {
+  top: 73%;
+  left: 12%;
+  color: #8eacc4;
+  animation-delay: -3s;
+}
+
+@keyframes background-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes background-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(8px, -12px) rotate(8deg);
+  }
+}
+
+
+/* =========================================================
+   HERO RINGS
+========================================================= */
+
+.hero-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  border: 1px solid #e9e3d8;
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  opacity: 0.8;
+}
+
+.hero-ring-one {
+  width: 520px;
+  height: 520px;
+
+  transform: translate(-50%, -50%);
+
+  animation: ring-one 22s linear infinite;
+}
+
+.hero-ring-two {
+  width: 700px;
+  height: 700px;
+
+  transform: translate(-50%, -50%);
+
+  border-color: #eee9df;
+
+  animation: ring-two 30s linear infinite reverse;
+}
+
+@keyframes ring-one {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes ring-two {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+
+/* =========================================================
+   HERO STARS
+========================================================= */
+
+.hero-star {
+  position: absolute;
+  z-index: 2;
+
+  pointer-events: none;
+
+  animation:
+    twinkle 4s ease-in-out infinite,
+    star-drift 7s ease-in-out infinite;
+}
+
+.hero-star-one {
+  left: 17%;
+  top: 25%;
+
+  color: #f1c84b;
+  font-size: 18px;
+}
+
+.hero-star-two {
+  right: 18%;
+  top: 30%;
+
+  color: #a999b8;
+  font-size: 15px;
+
+  animation-delay: 1s;
+}
+
+.hero-star-three {
+  left: 22%;
+  bottom: 24%;
+
+  color: #8eacc4;
+  font-size: 13px;
+
+  animation-delay: 2s;
+}
+
+.hero-star-four {
+  right: 14%;
+  bottom: 20%;
+
+  color: #d59d88;
+  font-size: 18px;
+
+  animation-delay: 3s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(8deg);
+  }
+}
+
+@keyframes star-drift {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -9px;
+  }
+}
+
+
+/* =========================================================
+   SMALL DOTS
+========================================================= */
+
+.hero-dot {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  animation:
+    dot-drift 6s ease-in-out infinite,
+    dot-pulse 3s ease-in-out infinite;
+}
+
+.hero-dot-one {
+  left: 28%;
+  top: 20%;
+
+  background: #b4a5c2;
+}
+
+.hero-dot-two {
+  right: 28%;
+  top: 21%;
+
+  background: #8eacc4;
+
+  animation-delay: -1.5s;
+}
+
+.hero-dot-three {
+  left: 16%;
+  bottom: 29%;
+
+  background: #f1c84b;
+
+  animation-delay: -3s;
+}
+
+.hero-dot-four {
+  right: 25%;
+  bottom: 25%;
+
+  background: #d59d88;
+
+  animation-delay: -4.5s;
+}
+
+@keyframes dot-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(7px, -10px);
+  }
+
+  50% {
+    transform: translate(-4px, -17px);
+  }
+
+  75% {
+    transform: translate(-9px, -5px);
+  }
+}
+
+@keyframes dot-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+}
+
+
+/* =========================================================
+   MAIN STAR
+========================================================= */
+
+.star-logo-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Hover controls the wrapper */
+  transition:
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.star-logo {
+  position: relative;
+
+  /* Gentle floating */
+  animation: star-float 4.5s ease-in-out infinite;
+
+  transition:
+    filter 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.star-logo-wrap:hover {
+  transform:
+    rotate(5deg)
+    scale(1.08);
+}
+
+
+/* =========================================================
+   FLOATING
+========================================================= */
+
+@keyframes star-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =========================================================
+   LOGO ORBIT
+========================================================= */
+
+.logo-orbit {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 190px;
+  height: 190px;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px dashed #ded7c9;
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  animation:
+    logo-orbit-spin 20s linear infinite,
+    orbit-breathe 5s ease-in-out infinite;
+}
+
+.logo-orbit-dot {
+  position: absolute;
+
+  left: 50%;
+  top: -4px;
+
+  width: 7px;
+  height: 7px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #f1c84b;
+
+  box-shadow:
+    0 0 0 5px rgba(241, 200, 75, 0.08);
+}
+
+@keyframes logo-orbit-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes orbit-breathe {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+}
+
+
+/* =========================================================
+   GENERAL STAR FLOAT
+========================================================= */
+
+.star-float {
+  animation: star-float 5s ease-in-out infinite;
+
+  transition:
+    transform 450ms ease,
+    filter 450ms ease;
+}
+
+.star-float:hover {
+  animation: none;
+
+  transform:
+    translateY(-7px)
+    rotate(5deg)
+    scale(1.08);
+}
+
+@keyframes star-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(2deg);
+  }
+}
+
+
+/* =========================================================
+   GENTLE ROTATION
+========================================================= */
+
+.gentle-spin {
+  animation:
+    gentle-spin 25s linear infinite,
+    gentle-opacity 5s ease-in-out infinite;
+}
+
+@keyframes gentle-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gentle-opacity {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+
+/* =========================================================
+   FLOATING DOT
+========================================================= */
+
+.float-dot {
+  animation:
+    float-dot 4s ease-in-out infinite,
+    float-side 7s ease-in-out infinite;
+}
+
+@keyframes float-dot {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+}
+
+@keyframes float-side {
+  0%,
+  100% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: 7px;
+  }
+}
+
+
+/* =========================================================
+   FADE UP
+========================================================= */
+
+.fade-up {
+  animation: fade-up 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.fade-up-delay-1 {
+  animation-delay: 150ms;
+}
+
+.fade-up-delay-2 {
+  animation-delay: 300ms;
+}
+
+.fade-up-delay-3 {
+  animation-delay: 450ms;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-container {
+  animation: stats-breathe 7s ease-in-out infinite;
+
+  transition:
+    transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 500ms ease;
+}
+
+.stats-container:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 30px 80px rgba(50, 45, 35, 0.08);
+}
+
+@keyframes stats-breathe {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+
+/* =========================================================
+   COURSE ROWS
+========================================================= */
+
+.course-row {
+  transition:
+    padding 450ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 450ms ease;
+}
+
+.group:hover .course-row {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.course-row h3 {
+  transition:
+    transform 400ms ease,
+    letter-spacing 400ms ease;
+}
+
+.group:hover .course-row h3 {
+  transform: translateX(5px);
+  letter-spacing: -0.02em;
+}
+
+.course-row .rounded-full {
+  transition:
+    transform 400ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 400ms ease;
+}
+
+.group:hover .course-row .rounded-full {
+  transform: scale(1.7);
+
+  box-shadow:
+    0 0 0 5px rgba(241, 200, 75, 0.08);
+}
+
+.course-row > span:last-child {
+  transition:
+    transform 400ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    color 300ms ease;
+}
+
+.group:hover .course-row > span:last-child {
+  transform: translateX(8px) rotate(-8deg);
+}
+
+
+/* =========================================================
+   LEARN / CREATE / SHARE
+========================================================= */
+
+.value-block {
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 350ms ease;
+}
+
+.value-block::after {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  right: -50px;
+  bottom: -60px;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+
+  transition:
+    transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.value-block:hover {
+  transform: translateY(-6px);
+}
+
+.value-block:hover::after {
+  transform: scale(1.5) rotate(25deg);
+}
+
+.value-block h3 {
+  transition: transform 400ms ease;
+}
+
+.value-block:hover h3 {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-line {
+  position: absolute;
+
+  border: 1px solid #e5c64c;
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  opacity: 0.65;
+}
+
+.cta-line-one {
+  width: 550px;
+  height: 180px;
+
+  left: -180px;
+  top: -80px;
+
+  transform: rotate(-12deg);
+
+  animation: cta-flow-one 12s ease-in-out infinite;
+}
+
+.cta-line-two {
+  width: 500px;
+  height: 160px;
+
+  right: -170px;
+  bottom: -70px;
+
+  transform: rotate(-15deg);
+
+  animation: cta-flow-two 14s ease-in-out infinite;
+}
+
+@keyframes cta-flow-one {
+  0%,
+  100% {
+    transform: rotate(-12deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(-5deg) translate(25px, 10px);
+  }
+}
+
+@keyframes cta-flow-two {
+  0%,
+  100% {
+    transform: rotate(-15deg) translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(-22deg) translate(-20px, -10px);
+  }
+}
+
+
+/* =========================================================
+   CTA STAR
+========================================================= */
+
+.cta-star {
+  animation: cta-star-bounce 4.5s ease-in-out infinite;
+
+  transition:
+    transform 450ms ease,
+    filter 450ms ease;
+}
+
+.cta-star:hover {
+  animation: none;
+
+  transform:
+    translateY(-8px)
+    rotate(7deg)
+    scale(1.08);
+
+  filter:
+    drop-shadow(0 20px 10px rgba(80, 67, 40, 0.16));
+}
+
+@keyframes cta-star-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+   ARCHIVE PAGE
+========================================================= */
+
+.archive-card {
+  transform: translateY(0);
+  transition:
+    transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 500ms ease;
+}
+
+.archive-card:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(
+    0 18px 30px rgba(70, 62, 45, 0.07)
+  );
+}
+
+
+/* =========================================================
+   ARCHIVE MASCOT
+========================================================= */
+
+.archive-mascot {
+  animation: archive-mascot-float 5s ease-in-out infinite;
+  filter: drop-shadow(
+    0 12px 6px rgba(80, 67, 40, 0.1)
+  );
+  transition:
+    transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 500ms ease;
+}
+
+.archive-mascot:hover {
+  animation-play-state: paused;
+  transform: translateY(-7px) rotate(5deg) scale(1.08);
+  filter: drop-shadow(
+    0 20px 10px rgba(80, 67, 40, 0.15)
+  );
+}
+
+@keyframes archive-mascot-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(2deg);
+  }
+}
+
+
+/* =========================================================
+   ARCHIVE STARS
+========================================================= */
+
+.archive-star {
+  position: absolute;
+  pointer-events: none;
+  animation: archive-star-float 6s ease-in-out infinite;
+}
+
+.archive-star-one {
+  left: 9%;
+  top: 30%;
+  color: #f1c84b;
+  font-size: 17px;
+}
+
+.archive-star-two {
+  right: 11%;
+  top: 24%;
+  color: #a999b8;
+  font-size: 13px;
+  animation-delay: -2s;
+}
+
+@keyframes archive-star-float {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translateY(-10px) rotate(8deg);
+  }
+}
