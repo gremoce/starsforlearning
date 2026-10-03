@@ -106,7 +106,7 @@ export default function Courses() {
             <div className="hidden md:block">
 
               <Image
-                src="/images/logo.png"
+                src="/images/starsforlearning.png"
                 alt="Starsforlearning"
                 width={130}
                 height={130}
@@ -341,7 +341,7 @@ export default function Courses() {
         <div className="relative mx-auto flex max-w-2xl flex-col items-center text-center">
 
           <Image
-            src="/images/logo.png"
+            src="/images/starsforlearning.png"
             alt=""
             width={120}
             height={120}
