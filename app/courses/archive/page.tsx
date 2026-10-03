@@ -131,7 +131,7 @@ export default function Archive() {
                   text-[#77736A]
                 "
               >
-                Explore courses I've taught over the years.
+                Courses I've taught over the years.
               </p>
             </div>
 
