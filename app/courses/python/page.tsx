@@ -166,7 +166,7 @@ export default function PythonCourse() {
             {/* Star */}
             <div className="hidden md:block">
               <Image
-                src="/images/logo-4.png"
+                src="/images/starsforlearning.png"
                 alt="Starsforlearning"
                 width={140}
                 height={140}

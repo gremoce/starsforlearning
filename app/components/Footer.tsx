@@ -19,7 +19,7 @@ export default function Footer() {
             >
 
               <Image
-                src="/images/logo.png"
+                src="/images/starsforlearning.png"
                 alt=""
                 width={45}
                 height={45}

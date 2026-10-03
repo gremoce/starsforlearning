@@ -29,7 +29,7 @@ export default function Header() {
             className="group flex items-center gap-2.5"
           >
             <Image
-              src="/images/logo.png"
+              src="/images/starsforlearning.png"
               alt="Starsforlearning"
               width={44}
               height={44}

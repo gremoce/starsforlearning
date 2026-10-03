@@ -92,7 +92,7 @@ export default function Home() {
 
             <div className="star-logo-wrap">
               <Image
-                src="/images/logo-4.png"
+                src="/images/starsforlearning.png"
                 alt="Starsforlearning"
                 width={180}
                 height={180}
@@ -317,7 +317,7 @@ export default function Home() {
 
 
           <Image
-            src="/images/logo-4.png"
+            src="/images/starsforlearning.png"
             alt=""
             width={120}
             height={120}

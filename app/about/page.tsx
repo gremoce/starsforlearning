@@ -85,7 +85,7 @@ export default function AboutPage() {
                 <div className="absolute bottom-0 left-1/2 h-5 w-28 -translate-x-1/2 rounded-full bg-[#292822]/10 blur-md transition duration-500 group-hover:scale-110" />
 
                 <Image
-                  src="/images/logo-4.png"
+                  src="/images/starsforlearning.png"
                   alt="Starsforlearning star"
                   width={260}
                   height={260}
