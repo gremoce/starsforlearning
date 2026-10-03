@@ -138,7 +138,7 @@ export default function Archive() {
             {/* Star */}
             <div className="hidden md:block">
               <Image
-                src="/images/logo.png"
+                src="/images/starsforlearning.png"
                 alt="Starsforlearning"
                 width={130}
                 height={130}
