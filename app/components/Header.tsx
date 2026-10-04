@@ -172,6 +172,14 @@ export default function Header() {
             </Link>
 
             <Link
+              href="/courses/archive"
+              onClick={() => setMenuOpen(false)}
+              className="rounded-2xl px-4 py-3 text-sm transition hover:bg-[#F0ECE3]"
+            >
+              course archive
+            </Link>
+
+            <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
               className="mt-1 rounded-2xl bg-[#FFD75A] px-4 py-3 text-center text-sm font-medium"
