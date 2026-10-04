@@ -551,7 +551,7 @@ export default function Archive() {
           "
         >
           <Image
-            src="/images/logo.png"
+            src="/images/starsforlearning.png"
             alt=""
             width={120}
             height={120}

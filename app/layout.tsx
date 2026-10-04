@@ -5,7 +5,7 @@ import Navbar from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Starsforlearning",
+  title: "starsforlearning",
   description:
     "A community for students to learn, create, and share knowledge.",
 };
