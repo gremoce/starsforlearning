@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "starsforlearning",
   description:
     "A community for students to learn, create, and share knowledge.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
