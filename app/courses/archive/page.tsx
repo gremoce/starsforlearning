@@ -117,7 +117,7 @@ export default function Archive() {
                   md:text-7xl
                 "
               >
-                past courses.
+                past courses
               </h1>
 
               <p
@@ -131,7 +131,7 @@ export default function Archive() {
                   text-[#77736A]
                 "
               >
-                Courses I've taught over the years.
+                Courses taught over the years.
               </p>
             </div>
 

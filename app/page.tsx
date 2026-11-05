@@ -353,9 +353,7 @@ export default function Home() {
               md:text-6xl
             "
           >
-            curious minds,
-            <br />
-            learning together.
+            learning and sharing
           </h2>
 
 
